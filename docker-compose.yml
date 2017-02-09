@@ -1,0 +1,21 @@
+version: '3'
+services:
+    glusterfns:
+       image: whale.mosfarm.eu/gluster2nfs:latest
+
+       container_name: gluster2nfs
+
+       privileged: true
+
+       environment:
+          GLUSTER_VOLUMES: 'vcm01 vcm02'
+          GLUSTER_HOST: 192.168.10.147
+
+       extra_hosts:
+          - storagepool01.dev.mosaicoon.internal:192.168.10.147
+          - storagepool02.dev.mosaicoon.internal:192.168.10.41
+     
+       ports:
+          - "2049:2049"
+
+       restart: always
