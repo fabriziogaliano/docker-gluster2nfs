@@ -1,19 +1,19 @@
 version: '3'
 services:
     glusterfns:
-       image: whale.mosfarm.eu/gluster2nfs:latest
+       image: fabriziogaliano/docker-gluster2nfs:latest
 
        container_name: gluster2nfs
 
        privileged: true
 
        environment:
-          GLUSTER_VOLUMES: 'vcm01 vcm02'
-          GLUSTER_HOST: 192.168.10.147
+          GLUSTER_VOLUMES: 'vol01 vol02'
+          GLUSTER_HOST: glusterhost01.local.domain
 
        extra_hosts:
-          - storagepool01.dev.mosaicoon.internal:192.168.10.147
-          - storagepool02.dev.mosaicoon.internal:192.168.10.41
+          - glusterhost01.local.domain:192.168.0.5
+          - glusterhost02.local.domain:192.168.0.10
      
        ports:
           - "2049:2049"
