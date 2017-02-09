@@ -1,7 +1,7 @@
-version: '3'
+version: '2'
 services:
     glusterfns:
-       image: fabriziogaliano/docker-gluster2nfs:latest
+       image: fabriziogaliano/gluster2nfs:latest
 
        container_name: gluster2nfs
 
