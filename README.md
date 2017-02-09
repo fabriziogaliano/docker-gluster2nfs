@@ -8,13 +8,13 @@ This Docker container allow mounting and access through NFS on multiple Gluster 
 # Run gluster2nfs on Gluster host
 
 ```
-docker run -d -p 2049:2049 --privileged fabriziogaliano/docker-gluster2nfs
+docker run -d -p 2049:2049 --privileged fabriziogaliano/gluster2nfs
 ```
 
-## Example Docker-Compose file for docker 1.13 (Strongly adviced)
+## Example Docker-Compose file (Strongly adviced)
 
 ```
-version: '3'
+version: '2'
 services:
     glusterfns:
        image: fabriziogaliano/docker-gluster2nfs:latest
