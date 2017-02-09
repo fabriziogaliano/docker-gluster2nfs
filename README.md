@@ -1,5 +1,5 @@
 # docker-gluster2nfs
-
+[![](https://images.microbadger.com/badges/image/fabriziogaliano/gluster2nfs.svg)](https://microbadger.com/images/fabriziogaliano/gluster2nfs "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/fabriziogaliano/gluster2nfs.svg)](https://microbadger.com/images/fabriziogaliano/gluster2nfs "Get your own version badge on microbadger.com")
 
 This Docker container allow mounting and access through NFS to multiple Gluster Volumes
 
